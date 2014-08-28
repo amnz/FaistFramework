@@ -1,0 +1,8 @@
+/distribute/ChatClient/bin/
+/distribute/ChatClient/obj/
+/distribute/ChatServer/chatserver.swf
+/distribute/lib/faist.swc
+/distribute/document/
+
+*.bat
+package-summary.txt

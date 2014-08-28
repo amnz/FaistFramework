@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:fst="jp.wda.faist.examples.chat.*"
+			   
+			   applicationComplete="manager.onApplicationComplete();"
+			   >
+	
+	<fx:Declarations>
+		<fst:MainManager id="manager"></fst:MainManager>
+	</fx:Declarations>
+	<fx:Style source="style.css" />
+	
+	<s:states>
+		<s:State name="disconnected" />
+		<s:State name="connected" />
+		<s:State name="processing" />
+	</s:states>
+	
+	<s:VGroup height="100%" width="100%" gap="10"
+			paddingLeft="10" paddingRight="10" 
+			paddingTop="10"  paddingBottom="10">
+		
+		<s:HGroup verticalAlign="middle" width="100%" gap="5">
+			<s:Label text="お名前"	/>
+			<s:TextInput id="txHandleName" width="100%"/>
+			<s:Button label="接続" id="btEnter" click="manager.enter();"      visible.connected="false" visible.disconnected="true"  visible.processing="false" />
+			<s:Button label="切断" id="btClose" click="manager.disconnect();" visible.connected="true"  visible.disconnected="false" visible.processing="false" />
+		</s:HGroup>
+		
+		<s:TextArea	id="txMessages"	width="100%" height="100%" />
+		
+		<s:HGroup verticalAlign="middle" width="100%" gap="5">
+			<s:TextInput id="txChat" width="100%"/>
+			<s:Button label="発言" id="btChat" click="manager.chat();" visible.connected="true"  visible.disconnected="false" visible.processing="false" />
+		</s:HGroup>
+	</s:VGroup>
+	
+</s:Application>

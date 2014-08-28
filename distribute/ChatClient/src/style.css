@@ -1,0 +1,20 @@
+@namespace s  "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+global {
+	font-size: 12pt;
+	font-family: "メイリオ";
+}
+
+s|Application {
+	backgroundColor				: #ffffff;
+}
+
+s|Button {
+	cornerRadius				: 5;
+	textIndent					: 0;
+	fillAlphas					: 0.6, 0.58, 0.75, 0.65;
+	color						: #333333;
+	textRollOverColor			: #000099;
+	borderColor					: #666666;
+}
